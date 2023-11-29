@@ -19,10 +19,24 @@ console.log(getComputerChoice())
 
 
 // player and computer battles here
+let winMsg = "You Win!"
+let loseMsg = "You Lose!"
 function playerVsComp (playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
       return "It's a TIE! Battle again!"
-    } 
-}
+    } else if (playerSelection === "rock" && computerSelection === "paper") {
+      return loseMsg
+    } else if (playerSelection === "rock" && computerSelection === "scissors") {
+      return winMsg
+    } else if (playerSelection === "paper" && computerSelection === "scissor") {
+      return loseMsg
+    } else if (playerSelection === "paper" && computerSelection === "rock") {
+      return winMsg
+    } else if (playerSelection === "scissors" && computerSelection === "rock") {
+      return loseMsg
+    } else if (playerSelection === "scissors" && computerSelection === "paper") {
+      return winMsg
+    }
+  }
 
-console.log(playerVsComp("rock", "rock"))
+console.log(playerVsComp("scissors", "paper"))

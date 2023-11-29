@@ -15,13 +15,16 @@ function getComputerChoice () {
 
   return compResult
 }
-console.log(getComputerChoice())
+//console.log(getComputerChoice())
 
 
 // player and computer battles here
 let winMsg = "You Win!"
 let loseMsg = "You Lose!"
 function playerVsComp (playerSelection, computerSelection) {
+
+  playerSelection = playerSelection.toLowerCase()
+
     if (playerSelection === computerSelection) {
       return "It's a TIE! Battle again!"
     } else if (playerSelection === "rock" && computerSelection === "paper") {
@@ -39,4 +42,4 @@ function playerVsComp (playerSelection, computerSelection) {
     }
   }
 
-console.log(playerVsComp("scissors", "paper"))
+console.log(playerVsComp("RoCk", "paper"))

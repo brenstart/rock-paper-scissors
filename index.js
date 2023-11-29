@@ -26,7 +26,8 @@ function playerVsComp (playerSelection, computerSelection) {
   playerSelection = playerSelection.toLowerCase()
 
     if (playerSelection === computerSelection) {
-      return "It's a TIE! Battle again!"
+      return "It's a TIE! Battle again!";
+      //playerVsComp(); //if tie, battle again
     } else if (playerSelection === "rock" && computerSelection === "paper") {
       return loseMsg
     } else if (playerSelection === "rock" && computerSelection === "scissors") {
@@ -42,4 +43,15 @@ function playerVsComp (playerSelection, computerSelection) {
     }
   }
 
-console.log(playerVsComp("RoCk", "paper"))
+
+
+let selection =""
+function inputSelection() {
+    selection = prompt("Rock, Paper or Scissors?")
+}
+    inputSelection()
+
+
+
+//This inititates the battle sequence
+console.log(playerVsComp(`${selection}`, `rock`)) //made the func inputSelection add it's result here as an argument

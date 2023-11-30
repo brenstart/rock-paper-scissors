@@ -32,6 +32,7 @@ function playerVsComp (playerSelection, computerSelection) {
       console.log(`Current score: You: ${playerScore} Computer:${compScore}`)
       return "It's a TIE! Battle again!";
       //playerVsComp(); //if tie, battle again
+      
     } else if (playerSelection === "rock" && computerSelection === "paper") {
       console.log("Computer chose " + computerSelection + ". You chose " + playerSelection)
       compScore += 1
@@ -76,8 +77,7 @@ function playerVsComp (playerSelection, computerSelection) {
 
 
 
-//game function
-
+//game function for best of 5
 function game() {
 for (let i = 1; i < 6; i++){
 
@@ -94,18 +94,19 @@ let compSelection = getComputerChoice
 
 //This inititates the battle sequence
 console.log(playerVsComp(inputSelection(), getComputerChoice())) //made the func inputSelection add it's result here as an argument
-
-}
-
-
-}
+    }
+  }
 
 
-
+//initiates the best of 5 loop
 game()
+
+//best of 5 message
 if (playerScore > compScore) {
   console.log ("You won the best of 5!")
 } else if (compScore > playerScore) {
   console.log ("Computer won the best of 5!")
+} else {
+    console.log("Best of 5 results in a TIE!")
+  }
   
-}

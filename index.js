@@ -97,6 +97,15 @@ console.log(playerVsComp(inputSelection(), getComputerChoice())) //made the func
 
 }
 
+
 }
 
+
+
 game()
+if (playerScore > compScore) {
+  console.log ("You won the best of 5!")
+} else if (compScore > playerScore) {
+  console.log ("Computer won the best of 5!")
+  
+}
